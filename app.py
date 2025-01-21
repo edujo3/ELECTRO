@@ -17,7 +17,7 @@ def receive_data():
     longitude = data.get("longitude", 0.0)
 
     # Guardar en un archivo CSV
-    with open("data.csv", "a", newline="") as f:
+    with open("/data/data.csv", "a", newline="") as f:
         writer = csv.writer(f)
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         writer.writerow([now_str, imei, temperature, latitude, longitude])
